@@ -20,47 +20,46 @@ class IdexAW
         curl_setopt($handle, CURLOPT_SSL_VERIFYPEER, false);
         $result = curl_exec($handle);
         curl_close($handle);
-        $decoded_result = json_decode($result, true);
-        return $decoded_result;
+        return json_decode($result, true);
     }
 
     public function printLast($symbol)
     {
-        return $this->ticker_data["{$symbol}"]['last'];
+        echo $this->ticker_data["{$symbol}"]['last'];
     }
 
     public function printHigh($symbol)
     {
-        return $this->ticker_data["{$symbol}"]['high'];
+        echo $this->ticker_data["{$symbol}"]['high'];
     }
 
     public function printLow($symbol)
     {
-        return $this->ticker_data["{$symbol}"]['low'];
+        echo $this->ticker_data["{$symbol}"]['low'];
     }
 
     public function printLowestAsk($symbol)
     {
-        return $this->ticker_data["{$symbol}"]['lowestAsk'];
+        echo $this->ticker_data["{$symbol}"]['lowestAsk'];
     }
 
     public function printHighestBid($symbol)
     {
-        return $this->ticker_data["{$symbol}"]['highestBid'];
+        echo $this->ticker_data["{$symbol}"]['highestBid'];
     }
 
     public function printPercentChange($symbol)
     {
-        return $this->ticker_data["{$symbol}"]['percentChange'];
+        echo $this->ticker_data["{$symbol}"]['percentChange'];
     }
 
     public function printBaseVolume($symbol)
     {
-        return $this->ticker_data["{$symbol}"]['baseVolume'];
+        echo $this->ticker_data["{$symbol}"]['baseVolume'];
     }
 
     public function printQuoteVolume($symbol)
     {
-        return $this->ticker_data["{$symbol}"]['quoteVolume'];
+        echo $this->ticker_data["{$symbol}"]['quoteVolume'];
     }
 }
