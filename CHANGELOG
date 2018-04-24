@@ -1,4 +1,7 @@
 IDEX API Wrapper CHANGELOG
 ==========================
+v1.0.1    2018-04-24
+- Refactor IdexAW class
+
 v1.0.0    2018-04-24
 - Initial Commit
