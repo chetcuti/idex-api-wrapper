@@ -2,7 +2,7 @@ IDEX API Wrapper
 ================
 A very simple PHP wrapper for the IDEX API.
 
-Using a token's symbol you can retrieve its last price, highest price, lowest price, and so on. See below for the full command list.
+Using a token's symbol you can retrieve its last price, highest price, volumes, and so on. See below for the full command list.
 
 Installing
 ----------
@@ -13,25 +13,29 @@ composer require chetcuti/idex-api-wrapper
 Usage
 -----
 ```
+// Load the IDEX API Wrapper class
 require_once '/vendor/autoload.php';
 $api = new IdexAW\IdexAW();
 
-// Print the last price of PAR (ETH)
+// Print the last price for PAR (ETH)
 $api->printLast('ETH_PAR')
 
-// Print the highest price of PAR (ETH)
+// Print the highest price for PAR (ETH)
 $api->printHigh('ETH_PAR')
+
+// Print the base volume for PAR (DAI)
+$api->printBaseVolume('DAI_PAR')
 ```
 
 Command List
 ------------
-printLast
-printHigh
-printLow
-printLowestAsk
-printHighestBid
-printPercentChange
-printBaseVolume
+printLast  
+printHigh  
+printLow  
+printLowestAsk  
+printHighestBid  
+printPercentChange  
+printBaseVolume  
 printQuoteVolume
 
 Requirements
